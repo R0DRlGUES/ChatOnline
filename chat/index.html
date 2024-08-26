@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat da Turma</title>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs/lib/stomp.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="welcome-form">
+        <h2>Bem vindo ao chat</h2>
+        <input type="text" id="nickname" placeholder="Escolha seu nick"/>
+        <button onclick="enterChatZoom()">Entrar na Sala</button>
+    </div>
+    <div class="sala" id="chat-home">
+        <h2>Sala de bate papo unipar</h2>
+        <div id="mensagens"></div>
+        <input type="text" id="mensageInput"/>
+        <button onclick="sendMessage()">Enviar</button>
+        <button onclick="disconnect()">Sair da Sala</button>
+    </div>
+</body>
+</html>
